@@ -2,20 +2,30 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    position: relative;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Roboto:wght@300;400;700&display=swap');
-/* Orbitron para títulos e destaque, Roboto para texto base */
+.sideMenu {
+    min-width: 5vh;
+    min-height: 100%;
+    max-width: 40vh;
+    margin-right: 20px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+}
 
 nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 nav a {
     text-decoration: none;
-    display: block;
+    display: flex;
     padding: 10px 15px;
     color: #333;
 }
@@ -26,24 +36,20 @@ nav a {
     justify-content: center;
 }
 
-.dropdown>li {
-    position: relative;
-}
-
 .dropdown-menu {
     display: none;
     position: absolute;
-    top: 100%;
-    left: 0;
+/*     top: 100%;
+    left: 0; */
     background-color: #fff;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
-    min-width: 106px;
+/*     min-width: 106px; */
 }
 
 .dropdown-menu li {
-    display: block;
-    width: 100%;
+    display: inline;
+    width: 500px;
 }
 
 .dropdown-menu li a {
@@ -56,21 +62,43 @@ nav a {
 }
 
 .has-dropdown:hover>.dropdown-menu {
-    display: block;
+    display: inline;
 }
 
 .has-dropdown:hover>a {
     background-color: #ddd;
 }
 
+.blockMenu {
+    display: none;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.sideMenu:hover .blockMenu {
+    display: flex;
+}
+
 main {
-    padding: 20px;
+    padding: 40px 20px;
+    padding-left: 0;
+    padding-right: 0;
+    width: auto;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
 }
 
 footer {
     text-align: center;
     padding: 10px;
     background-color: #f4f4f4;
+}
+
+.mainMenu{
+    display: flex;
+    flex-direction: column;
+    /* justify-items: center; */
 }
 
 #userForm {
@@ -251,12 +279,6 @@ nav a:hover {
 .has-dropdown:hover>a {
     background-color: #2a2a2a;
     color: #0ff;
-}
-
-main {
-    padding: 40px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
 #introducao-site {
