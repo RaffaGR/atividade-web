@@ -12,21 +12,24 @@
   <header>
     <h1>Formulário</h1>
   </header>
-  <nav>
-    <ul class="dropdown">
-      <li class="has-dropdown">
-        <a href="#">Especial</a>
-        <ul class="dropdown-menu">
-          <li><a href="./pagina1.html">Frag 1</a></li>
-          <li><a href="./pagina2.html">Frag 2</a></li>
-        </ul>
-      </li>
-      <li><a href="../index.html">Núcleo</a></li>
-      <li><a href="#">Transmissão de dados (formulario)</a></li>
-    </ul>
-  </nav>
+
   <main>
-    <section>
+    <nav class="sideMenu">
+      <h1>➡️</h1>
+      <ul class="blockMenu">
+        <li><a href="../index.html">Núcleo</a></li>
+        <li><a href="#">Transmissão de dados (formulario)</a></li>
+        <li class="has-dropdown">
+          <a href="#">Especial</a>
+          <ul class="dropdown-menu">
+            <li><a href="./pagina1.html">Frag 1</a></li>
+            <li><a href="./pagina2.html">Frag 2</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="mainMenu"> <!-- Precisa pq senão o collun buga para o output dps do form -->
       <form id="userForm">
         <label>Nome: <input type="text" name="nome" required></label>
         <label>Email: <input type="email" name="email" required></label>
@@ -46,7 +49,7 @@
     </section>
   </main>
   <footer>
-    <address>Contato: ferreirarafael717@gmail.com</address>
+    <address>Contato: <a href="mailto:ferreirarafael717@gmail.com">ferreirarafael717@gmail.com</a></address>
   </footer>
   <script src="../scripts/script.js" defer></script>
 </body>
